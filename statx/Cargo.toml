@@ -1,0 +1,11 @@
+[package]
+name = "statx"
+version = "0.1.0"
+authors = ["biluohc <biluohc@qq.com>"]
+
+[build-dependencies]
+bindgen = "0.26.3"
+cc = "1.0"
+
+[dependencies]
+chrono = "0.4"
