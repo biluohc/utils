@@ -341,6 +341,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "syscall"
+version = "0.1.0"
+dependencies = [
+ "libc 0.2.42 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "term"
 version = "0.4.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"

@@ -1,2 +1,2 @@
 [workspace]
-members = ["statx"]
+members = ["statx", "syscall"]
