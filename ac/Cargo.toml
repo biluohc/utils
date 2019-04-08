@@ -1,0 +1,15 @@
+[package]
+name = "ab"
+version = "0.1.0"
+authors = ["biluohc <biluohc@qq.com>"]
+edition = "2015"
+
+[workspace]
+
+[dependencies]
+ac = { path = "ac", version = "*" }
+ocb = { path = "ocb", version = "*" }
+crossbeam = "0.7.1"
+arc-swap = "0.3.9"
+lazy_static = "1.2"
+parking_lot = "0.7.1"

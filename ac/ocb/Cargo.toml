@@ -1,0 +1,8 @@
+[package]
+name = "ocb"
+version = "0.1.0"
+authors = ["ysl <ysl@sparkpool.com>"]
+edition = "2015"
+
+[dependencies]
+crossbeam = "0.5.0"
