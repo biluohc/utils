@@ -1,2 +1,7 @@
 [workspace]
-members = ["statx", "syscall"]
+members = [
+    "statx", 
+    "syscall", 
+    "arccell/ac", 
+    "arccell/bench",
+]

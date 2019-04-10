@@ -23,7 +23,8 @@ impl<T> ArcCell<T> {
     pub fn load(&self, ord: Ordering) -> Arc<T> {
         let data = Self::ptr2data(&self.ptr, ord);
         let res = Arc::clone(&data);
-        Arc::into_raw(data);
+        std::mem::forget(data);
+        // Arc::into_raw(data);
         res
     }
 
@@ -45,9 +46,8 @@ impl<T> ArcCell<T> {
 
 impl<T> Drop for ArcCell<T>{
     fn drop(&mut self) {
-        let ptr =  self.ptr.load(Ordering::SeqCst);
-        let _data = unsafe { Arc::from_raw(ptr as *const _) };
-        // println!("drop::<ArcCell<T>>()  Arc::strong_count: {}", Arc::strong_count(&data))
+        let _data = Self::ptr2data(&self.ptr, Ordering::SeqCst);
+        // println!("drop::<ArcCell<T>>()  Arc::strong_count: {}", Arc::strong_count(&_data))
     }
 }
 
