@@ -1,3 +1,11 @@
+// https://blog.rust-lang.org/
+// jemalloc 通常比系统的内存分配器更高效，但并非总是如此，并且它增大了可执行文件体积不少。
+// #[global_allocator] 只能在包或其递归依赖项中使用一次。
+// jemallocator = "0.3.0"
+extern crate jemallocator;
+#[global_allocator]
+static ALLOC: jemallocator::Jemalloc = jemallocator::Jemalloc;
+
 #[macro_use]
 extern crate log;
 extern crate flexi_logger;
