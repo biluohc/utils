@@ -4,4 +4,5 @@ members = [
     "syscall", 
     "arccell/ac", 
     "arccell/bench",
+    "r4j"
 ]

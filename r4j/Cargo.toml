@@ -1,0 +1,12 @@
+[package]
+name = "r4j"
+version = "0.1.0"
+authors = ["ysl <ysl@sparkpool.com>"]
+edition = "2018"
+
+[dependencies]
+flexi_logger = "^0.11.4"
+log = "0.4"
+fern = "0.5"
+chrono = "0.4"
+colored = "*"
